@@ -1,6 +1,6 @@
-import Home from '../pages/Home';
-import Tasks from '../pages/Tasks';
-import Analytics from '../pages/Analytics';
+import HomePage from '@/components/pages/HomePage';
+import TasksPage from '@/components/pages/TasksPage';
+import AnalyticsPage from '@/components/pages/AnalyticsPage';
 
 export const routes = {
   home: {
@@ -8,21 +8,21 @@ export const routes = {
     label: 'Dashboard',
     path: '/',
     icon: 'LayoutDashboard',
-    component: Home
+component: HomePage
   },
   tasks: {
     id: 'tasks',
     label: 'All Tasks',
     path: '/tasks',
     icon: 'CheckSquare',
-    component: Tasks
+component: TasksPage
   },
   analytics: {
     id: 'analytics',
     label: 'Analytics',
     path: '/analytics',
     icon: 'BarChart3',
-    component: Analytics
+component: AnalyticsPage
   }
 };
 

@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import Layout from './Layout';
-import { routeArray } from './config/routes';
-import NotFound from './pages/NotFound';
+import Layout from '@/Layout';
+import { routeArray } from '@/config/routes';
+import NotFoundPage from '@/components/pages/NotFoundPage';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
               element={<route.component />}
             />
           ))}
-          <Route path="*" element={<NotFound />} />
+<Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
       <ToastContainer
