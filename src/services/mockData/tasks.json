@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "title": "Review quarterly marketing reports",
+    "description": "Analyze performance metrics and prepare recommendations for next quarter's strategy",
+    "categoryId": "1",
+    "priority": 3,
+    "dueDate": "2024-01-15T09:00:00.000Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-01-10T08:30:00.000Z",
+    "archived": false
+  },
+  {
+    "id": "2",
+    "title": "Update client presentation slides",
+    "description": "Incorporate latest design feedback and prepare for Monday's meeting",
+    "categoryId": "1",
+    "priority": 2,
+    "dueDate": "2024-01-14T16:00:00.000Z",
+    "completed": true,
+    "completedAt": "2024-01-13T14:30:00.000Z",
+    "createdAt": "2024-01-11T10:15:00.000Z",
+    "archived": false
+  },
+  {
+    "id": "3",
+    "title": "Schedule dental appointment",
+    "description": "Book routine cleaning and checkup for next month",
+    "categoryId": "2",
+    "priority": 1,
+    "dueDate": "2024-01-20T00:00:00.000Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-01-09T18:45:00.000Z",
+    "archived": false
+  },
+  {
+    "id": "4",
+    "title": "Finish React component library documentation",
+    "description": "Complete API documentation and usage examples for all components",
+    "categoryId": "3",
+    "priority": 2,
+    "dueDate": "2024-01-18T17:00:00.000Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-01-08T09:00:00.000Z",
+    "archived": false
+  },
+  {
+    "id": "5",
+    "title": "Plan weekend hiking trip",
+    "description": "Research trails, check weather forecast, and pack gear for Saturday's adventure",
+    "categoryId": "2",
+    "priority": 1,
+    "dueDate": "2024-01-19T20:00:00.000Z",
+    "completed": true,
+    "completedAt": "2024-01-12T19:30:00.000Z",
+    "createdAt": "2024-01-07T16:20:00.000Z",
+    "archived": false
+  },
+  {
+    "id": "6",
+    "title": "Code review for authentication module",
+    "description": "Review security implementation and test edge cases",
+    "categoryId": "3",
+    "priority": 3,
+    "dueDate": "2024-01-16T11:00:00.000Z",
+    "completed": true,
+    "completedAt": "2024-01-13T10:45:00.000Z",
+    "createdAt": "2024-01-12T08:15:00.000Z",
+    "archived": false
+  },
+  {
+    "id": "7",
+    "title": "Buy groceries for dinner party",
+    "description": "Get ingredients for three-course meal: appetizers, main course, and dessert",
+    "categoryId": "2",
+    "priority": 2,
+    "dueDate": "2024-01-17T15:00:00.000Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-01-13T12:30:00.000Z",
+    "archived": false
+  },
+  {
+    "id": "8",
+    "title": "Submit expense reports",
+    "description": "Compile and submit December business expense receipts",
+    "categoryId": "1",
+    "priority": 2,
+    "dueDate": "2024-01-15T23:59:00.000Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-01-05T14:00:00.000Z",
+    "archived": false
+  }
+]
