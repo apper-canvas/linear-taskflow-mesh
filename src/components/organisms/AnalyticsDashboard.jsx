@@ -48,12 +48,11 @@ function AnalyticsDashboard() {
     const weekEnd = endOfWeek(today, { weekStartsOn: 1 });
     const daysOfWeek = eachDayOfInterval({ start: weekStart, end: weekEnd });
 
-    return daysOfWeek.map(day => {
+return daysOfWeek.map(day => {
       const dayTasks = tasks.filter(task => 
-        task.completedAt &amp;&amp; 
+        task.completedAt && 
         format(new Date(task.completedAt), 'yyyy-MM-dd') === format(day, 'yyyy-MM-dd')
       );
-      
       return {
         day: format(day, 'EEE'),
         date: format(day, 'MMM d'),
@@ -97,9 +96,9 @@ function AnalyticsDashboard() {
     }).filter(p => p.total > 0);
   };
 
-  const getStreakInfo = () => {
+const getStreakInfo = () => {
     const sortedCompletedTasks = tasks
-      .filter(task => task.completed &amp;&amp; task.completedAt)
+      .filter(task => task.completed && task.completedAt)
       .sort((a, b) => new Date(b.completedAt) - new Date(a.completedAt));
 
     let currentStreak = 0;
@@ -128,13 +127,11 @@ function AnalyticsDashboard() {
         break;
       }
     }
-
-    return {
+return {
       current: currentStreak,
-      needsTaskToday: !hasTaskToday &amp;&amp; isToday(addDays(checkDate, 1))
+      needsTaskToday: !hasTaskToday && isToday(addDays(checkDate, 1))
     };
   };
-
   const weeklyProgress = getWeeklyProgress();
   const categoryStats = getCategoryStats();
   const priorityStats = getPriorityStats();
@@ -185,9 +182,8 @@ function AnalyticsDashboard() {
           <Text as="p" className="text-surface-600">Track your productivity and progress</Text>
         </div>
       </div>
-
-      {/* Key Metrics */}
-      {stats &amp;&amp; (
+{/* Key Metrics */}
+      {stats && (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <StatCard
             label="Total Tasks"
