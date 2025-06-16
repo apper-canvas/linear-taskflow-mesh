@@ -91,9 +91,9 @@ function TasksListOrganism() {
     .filter(task => selectedCategory === 'all' || task.categoryId === selectedCategory)
     .filter(task => task.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
                    task.description.toLowerCase().includes(searchQuery.toLowerCase()))
-    .sort((a, b) => {
+.sort((a, b) => {
       if (sortBy === 'dueDate') {
-        if (!a.dueDate &amp;&amp; !b.dueDate) return 0;
+        if (!a.dueDate && !b.dueDate) return 0;
         if (!a.dueDate) return 1;
         if (!b.dueDate) return -1;
         return new Date(a.dueDate) - new Date(b.dueDate);
@@ -104,10 +104,10 @@ function TasksListOrganism() {
       return new Date(b.createdAt) - new Date(a.createdAt);
     });
 
-  const getTaskStats = () => {
+const getTaskStats = () => {
     const total = filteredTasks.length;
     const completed = filteredTasks.filter(t => t.completed).length;
-    const overdue = filteredTasks.filter(t => t.dueDate &amp;&amp; isPast(new Date(t.dueDate)) &amp;&amp; !t.completed).length;
+    const overdue = filteredTasks.filter(t => t.dueDate && isPast(new Date(t.dueDate)) && !t.completed).length;
     return { total, completed, overdue };
   };
 
