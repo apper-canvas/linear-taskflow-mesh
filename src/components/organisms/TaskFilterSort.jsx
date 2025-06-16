@@ -14,10 +14,10 @@ const TaskFilterSort = ({
     showSearch = true
 }) => {
     return (
-        <Card className="p-4 space-y-4">
-            {(showSearch || showFilterOptions) &amp;&amp; (
+<Card className="p-4 space-y-4">
+            {(showSearch || showFilterOptions) && (
                 <div className="flex flex-col sm:flex-row gap-4">
-                    {showSearch &amp;&amp; (
+                    {showSearch && (
                         <div className="relative flex-1">
                             <ApperIcon name="Search" size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-surface-400" />
                             <Input
@@ -29,9 +29,9 @@ const TaskFilterSort = ({
                             />
                         </div>
                     )}
-                    {showFilterOptions &amp;&amp; (
+                    {showFilterOptions && (
                         <div className="flex flex-wrap gap-2">
-                            {setFilter &amp;&amp; (
+                            {setFilter && (
                                 <Select
                                     value={filter}
                                     onChange={(e) => setFilter(e.target.value)}
