@@ -43,10 +43,10 @@ function DashboardOverview() {
         statsService.getAll()
       ]);
       setTasks(tasksData);
-      setCategories(categoriesData);
+setCategories(categoriesData);
       setStats(statsData);
       // Set default category for new task if categories exist
-      if (categoriesData.length > 0 &amp;&amp; !newTask.categoryId) {
+      if (categoriesData.length > 0 && !newTask.categoryId) {
         setNewTask(prev => ({ ...prev, categoryId: categoriesData[0].id }));
       }
     } catch (err) {
@@ -133,9 +133,9 @@ function DashboardOverview() {
     .filter(task => !task.archived) // Dashboard only shows active tasks
     .filter(task => !task.completed) // Dashboard only shows uncompleted tasks by default
     .filter(task => selectedCategory === 'all' || task.categoryId === selectedCategory)
-    .sort((a, b) => {
+.sort((a, b) => {
       if (sortBy === 'dueDate') {
-        if (!a.dueDate &amp;&amp; !b.dueDate) return 0;
+        if (!a.dueDate && !b.dueDate) return 0;
         if (!a.dueDate) return 1;
         if (!b.dueDate) return -1;
         return new Date(a.dueDate) - new Date(b.dueDate);
@@ -204,9 +204,9 @@ function DashboardOverview() {
   }
 
   return (
-    <div className="p-6 space-y-6 max-w-full overflow-hidden">
+<div className="p-6 space-y-6 max-w-full overflow-hidden">
       {/* Stats Dashboard */}
-      {stats &amp;&amp; (
+      {stats && (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <StatCard
             label="Total Tasks"
@@ -268,9 +268,9 @@ function DashboardOverview() {
         </Button>
       </div>
 
-      {/* Quick Add Form */}
+{/* Quick Add Form */}
       <AnimatePresence>
-        {showQuickAdd &amp;&amp; (
+        {showQuickAdd && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
