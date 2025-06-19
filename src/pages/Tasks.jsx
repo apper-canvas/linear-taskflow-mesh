@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import ApperIcon from '../components/ApperIcon';
 import { taskService, categoryService } from '../services';
 import { format, isToday, isTomorrow, isPast } from 'date-fns';
-
+import { formatDueDate, getDueDateColor } from '@/utils/dateHelpers';
 function Tasks() {
   const [tasks, setTasks] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -104,25 +104,7 @@ function Tasks() {
     1: { label: 'Low', color: 'bg-green-100 text-green-700 border-green-200' },
     2: { label: 'Medium', color: 'bg-yellow-100 text-yellow-700 border-yellow-200' },
     3: { label: 'High', color: 'bg-accent-100 text-accent-700 border-accent-200' }
-  };
-
-  const formatDueDate = (dueDate) => {
-    if (!dueDate) return '';
-    const date = new Date(dueDate);
-    if (isToday(date)) return 'Today';
-    if (isTomorrow(date)) return 'Tomorrow';
-    if (isPast(date)) return `Overdue (${format(date, 'MMM d')})`;
-    return format(date, 'MMM d');
-  };
-
-  const getDueDateColor = (dueDate) => {
-    if (!dueDate) return 'text-surface-500';
-    const date = new Date(dueDate);
-    if (isPast(date)) return 'text-red-600';
-    if (isToday(date)) return 'text-accent-600';
-    return 'text-surface-600';
-  };
-
+};
   const getTaskStats = () => {
     const total = filteredTasks.length;
     const completed = filteredTasks.filter(t => t.completed).length;
